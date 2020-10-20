@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> hipity </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  70% { border-color: orange; }
+}
+.button {
+    display: inline-block;
+    position: relative;
+    margin: 1em;
+    padding: 10px 30px;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 16px;
+    outline: none;
+    color: #ffffff;
+    background: transparent;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+}
+
+a:hover {
+    color: #007053;
+    text-decoration: underline;
+}
+
+.button span {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.button:before,
+.button:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+.button:before {
+    content: attr(data-hover);
+    -webkit-transform: 0.4s;
+    -moz-transform: 0.4s;
+    -ms-transform: 0.4s;
+    -o-transform: 0.4s;
+    transform: 0.4s;
+}
+
+.button:hover span,
+.button:active span {
+    opacity: 0;
+    -webkit-transform: 0.4s;
+    -moz-transform: 0.4s;
+    -ms-transform: 0.4s;
+    -o-transform: 0.4s;
+    transform: 0.4s;
+}
+
+.button:hover:before,
+.button:active:after {
+    opacity: 1;
+    -webkit-transform: 0.4s;
+    -moz-transform: 0.4s;
+    -ms-transform: 0.4s;
+    -o-transform: 0.4s;
+    transform: 0.4s;
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+.button:active:before {
+    -webkit-transform: 0.4s;
+    -moz-transform: 0.4s;
+    -ms-transform: 0.4s;
+    -o-transform: 0.4s;
+    transform: 0.4s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.container {
+   margin-top: 10%;
+   font-family: "Noto Sans JP";
+   font-size: "50px";
+   color: #FFF;
+   
+}
+
+.container p {
+font-size: 50px;
+margin-bottom: 2px;
+}
+
+#iurl {
+background-color: inherit;
+width: 100%;
+height: 28px;
+border: solid 1px #FFF;
+font-family: "Roboto";
+font-size: 16px;
+color: #eee;
+padding: 8px 0px;
+margin-bottom: 5px;
+box-sizing: content-box;
+text-align: center;
+border-radius: 2px;
+}
+
+#btn {
+background-color: inherit;
+width: 100%;
+height: 28px;
+border: solid 1px #0066ff;
+font-family: "Roboto";
+font-size: 16px;
+color: #0066ff;
+padding: 8px 0px;
+box-sizing: content-box;
+transition: 0.3s;
+border-radius: 2px;
+}
+
+#btn:hover {
+background: #00bb8b;
+color: #fff;
+}
+
+.container a {
+height: 20px;
+background: inherit;
+color: #ddd;
+border: 0;
+cursor: pointer;
+font-family: "Roboto";
+font-size: 17px;
+transition: 0.3s;
+}
+.container a:hover {
+font-size: 23;
+}
+.url {
+width: 300px;
+margin: auto;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="yeet.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <CENTER>
+    <h1> 
+  <form class="url" method="POST" action="/git/session/">
+    <input placeholder="https://www.google.com" name="url" id="iurl" type="text">
+    <button type="submit" id="btn"><span>hipity hopity un block this site-ity?</span></button>
+  
+</form>
+  </CENTER>
+  <h6> made by delt_505 2020 For Pt software to be used by you</h6>
+</div>
