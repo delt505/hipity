@@ -1,4 +1,5 @@
 # hipity proxy
+this public repo is as of no unmantained i might start mantaining it later
 hi there idk what im doing so here is the read me
 
 the backend is made by duce https://github.com/titaniumnetwork-dev/alloyproxy
