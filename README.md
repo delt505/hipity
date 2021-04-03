@@ -1,10 +1,11 @@
-# hipity proxy
-this public repo is as of no unmantained i might start mantaining it later
+# Hipity Proxy
+This public repo is unmantained. I might start mantaining it later
 hi there idk what im doing so here is the read me
 
-the backend is made by duce https://github.com/titaniumnetwork-dev/alloyproxy
-this is a modern proxy
-for questions join tn and dm delt
+The backend is made by duce https://github.com/titaniumnetwork-dev/alloyproxy
+This is a modern proxy
+For questions join tn and dm delt
 
-i will add a deploy button soon i recamend heruko for free hosting and nodeclusters for paid
-also i will try to keep this up to date with alloy (i will TRY)_
+I recommend heroku for free hosting and nodeclusters for paid
+Also I will try to keep this up to date with alloy (I will try)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/delt505/hipity/tree/master)
